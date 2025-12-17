@@ -701,7 +701,6 @@ import moderationRoutes from './routes/moderation.js';
 import searchRoutes from './routes/search.js';
 import blockRoutes from './routes/blocks.js';
 import buildRoutes from './routes/builds.js';
-import carlcordModerationRoutes from './routes/moderation.js';
 
 // API Routes
 app.use('/api/auth', authRoutes);
@@ -755,7 +754,6 @@ import inviteRoutes from './routes/invites.js';
 app.use('/api/invites', inviteRoutes);
 import emojiRoutes from './routes/emojis.js';
 app.use('/api/emojis', emojiRoutes);
-app.use('/api/carlcord/moderation', carlcordModerationRoutes);
 
 // Debug: Log all registered routes
 console.log('✅ Voice routes registered at /api/voice');

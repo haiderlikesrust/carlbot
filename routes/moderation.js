@@ -4,7 +4,7 @@ import { getDatabase } from '../database/init.js'
 const router = express.Router()
 
 // Middleware to authenticate and check permissions
-function authenticateToken(req, res, next) {
+async function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization']
   const token = authHeader && authHeader.split(' ')[1]
   
@@ -15,10 +15,11 @@ function authenticateToken(req, res, next) {
   // Verify JWT token
   try {
     const jwt = await import('jsonwebtoken')
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key')
+    const decoded = jwt.default.verify(token, process.env.JWT_SECRET || 'your-secret-key')
     req.user = decoded
     next()
   } catch (error) {
+    console.error('JWT verification error:', error)
     return res.status(403).json({ error: 'Invalid or expired token' })
   }
 }
