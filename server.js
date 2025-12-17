@@ -773,19 +773,26 @@ if (voiceRoutes && voiceRoutes.stack) {
 if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, 'client', 'dist')
   
-  // Serve static files
-  app.use(express.static(clientBuildPath))
-  
-  // Serve React app for all non-API routes
-  app.get('*', (req, res) => {
-    // Don't serve React app for API routes
-    if (req.path.startsWith('/api')) {
-      return res.status(404).json({ error: 'API endpoint not found' })
-    }
-    res.sendFile(path.join(clientBuildPath, 'index.html'))
-  })
-  
-  console.log('✅ Production mode: Serving React app from', clientBuildPath)
+  // Check if build directory exists
+  if (!fs.existsSync(clientBuildPath)) {
+    console.error('❌ ERROR: Frontend build not found at:', clientBuildPath)
+    console.error('   Make sure to run: cd client && npm install && npm run build')
+    console.error('   Or set NODE_ENV=development to skip frontend serving')
+  } else {
+    // Serve static files
+    app.use(express.static(clientBuildPath))
+    
+    // Serve React app for all non-API routes
+    app.get('*', (req, res) => {
+      // Don't serve React app for API routes
+      if (req.path.startsWith('/api')) {
+        return res.status(404).json({ error: 'API endpoint not found' })
+      }
+      res.sendFile(path.join(clientBuildPath, 'index.html'))
+    })
+    
+    console.log('✅ Production mode: Serving React app from', clientBuildPath)
+  }
 } else {
   // Serve main page (for development, React dev server runs separately)
   app.get('/', (req, res) => {
