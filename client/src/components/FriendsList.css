@@ -1,0 +1,281 @@
+.friends-list {
+  width: 240px;
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border-secondary);
+}
+
+.friends-header {
+  height: 48px;
+  padding: 0 var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-secondary);
+  background: var(--bg-card);
+}
+
+.friends-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.add-friend-btn {
+  background: transparent;
+  border: 1px solid var(--border-secondary);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-size: 20px;
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-friend-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.friends-tabs {
+  display: flex;
+  padding: var(--space-sm);
+  gap: var(--space-xs);
+  border-bottom: 1px solid var(--border-secondary);
+  background: var(--bg-card);
+}
+
+.friends-tabs button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  font-family: var(--font-primary);
+}
+
+.friends-tabs button:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.friends-tabs button.active {
+  background: var(--bg-active);
+  color: var(--color-primary);
+  border: 1px solid var(--border-primary);
+}
+
+.friends-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm);
+  background: var(--bg-primary);
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-bottom: var(--space-xs);
+  border: 1px solid transparent;
+}
+
+.friend-item:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-secondary);
+  transform: translateX(2px);
+}
+
+.friend-item.pending {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+}
+
+.friend-avatar-wrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.friend-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-secondary);
+  background: var(--text-tertiary);
+}
+
+.status-indicator.online {
+  background: var(--color-success);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+.status-indicator.idle {
+  background: var(--color-warning);
+}
+
+.status-indicator.dnd {
+  background: var(--color-error);
+}
+
+.status-indicator.offline {
+  background: var(--text-tertiary);
+}
+
+.friend-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.friend-name {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-primary);
+}
+
+.friend-status {
+  color: var(--text-tertiary);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: var(--space-xs);
+}
+
+.friend-game {
+  color: var(--color-primary);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: var(--space-xs);
+}
+
+.friend-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.accept-btn,
+.reject-btn {
+  padding: var(--space-xs) var(--space-sm);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  font-family: var(--font-primary);
+}
+
+.accept-btn {
+  background: var(--color-success);
+  color: white;
+  border: 1px solid var(--color-success);
+}
+
+.accept-btn:hover {
+  background: var(--color-success);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+.reject-btn {
+  background: var(--color-error);
+  color: white;
+  border: 1px solid var(--color-error);
+}
+
+.reject-btn:hover {
+  background: var(--color-error);
+  box-shadow: 0 0 10px rgba(255, 0, 64, 0.5);
+  transform: translateY(-1px);
+}
+
+.remove-friend-btn {
+  background: transparent;
+  border: 1px solid var(--border-secondary);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-size: 18px;
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend-item:hover .remove-friend-btn {
+  opacity: 1;
+}
+
+.remove-friend-btn:hover {
+  background: var(--color-error);
+  border-color: var(--color-error);
+  color: white;
+}
+
+.no-friends {
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  font-family: var(--font-primary);
+}
+
+.pending-requests {
+  margin-bottom: 16px;
+}
+
+.friends-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.friends-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.friends-content::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--bg-secondary);
+}
+
+.friends-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}

@@ -1,0 +1,225 @@
+@import './styles/design-system.css';
+
+/* Prevent flash of unstyled content */
+html {
+  background: var(--bg-primary);
+}
+
+body {
+  background: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide any browser autocomplete or stray input elements */
+body > input[type="text"]:not([class*="carlcord"]):not([class*="search"]),
+body > input[type="search"]:not([class*="carlcord"]):not([class*="search"]),
+input[autocomplete]:not([class*="carlcord"]):not([class*="search"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  pointer-events: none !important;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8),
+                 0 0 20px rgba(0, 255, 65, 0.6),
+                 0 0 30px rgba(0, 255, 65, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 65, 1),
+                 0 0 30px rgba(0, 255, 65, 0.8),
+                 0 0 40px rgba(0, 255, 65, 0.6);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--bg-primary);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color var(--transition-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
+/* Light theme */
+[data-theme="light"] body {
+    background: #f5f5f5;
+}
+
+[data-theme="light"] .container {
+    background: #ffffff;
+    border-color: #333;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .retro-title {
+    color: #333;
+    text-shadow: none;
+}
+
+[data-theme="light"] .subtitle {
+    color: #666;
+}
+
+/* Subtle scanline effect (optional - can be removed for cleaner look) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.2;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide any browser autocomplete or stray input elements at bottom */
+body > input[type="text"]:not([class*="carlcord"]):not([class*="search"]),
+body > input[type="search"]:not([class*="carlcord"]):not([class*="search"]),
+input[autocomplete]:not([class*="carlcord"]):not([class*="search"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  pointer-events: none !important;
+}
+
+/* Hide any white boxes at bottom-left corner */
+*[style*="position: fixed"][style*="bottom"][style*="left"]:not([class*="voice"]):not([class*="carlcord"]) {
+  display: none !important;
+}
+
+/* Hide any stray "0" text that appears next to avatars */
+.member-item,
+.carlcord-message,
+.voice-channel-user-item,
+.voice-participant-avatar {
+  font-variant-numeric: normal;
+}
+
+/* Hide text nodes that are just "0" */
+.member-item > *:first-child,
+.carlcord-message > *:first-child,
+.voice-channel-user-item > *:first-child {
+  position: relative;
+}
+
+/* Aggressive: Hide any element that only contains "0" */
+*:not(script):not(style) {
+  text-indent: 0;
+}
+
+/* Hide any counter or list marker that might show "0" */
+.members-list,
+.carlcord-messages-area,
+.voice-channel-users,
+.voice-participants-avatars {
+  list-style: none !important;
+  counter-reset: none !important;
+}
+
+.app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .app {
+        align-items: flex-start;
+    }
+}
+

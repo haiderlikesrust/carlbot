@@ -1,0 +1,107 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease-in, gradient-shift 3s ease infinite;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loading-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.spinner-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.spinner-ring:nth-child(1) {
+  animation-duration: 1s;
+  border-top-color: #00ff41;
+}
+
+.spinner-ring:nth-child(2) {
+  animation-duration: 1.5s;
+  border-top-color: #00d4ff;
+  animation-direction: reverse;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+}
+
+.spinner-ring:nth-child(3) {
+  animation-duration: 2s;
+  border-top-color: #9d4edd;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+}
+
+.loading-text {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.8), 0 0 40px rgba(0, 255, 65, 0.4);
+  animation: pulse 1.5s ease-in-out infinite, glow-pulse 2s ease-in-out infinite;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.loading-text::after {
+  content: '🎮';
+  position: absolute;
+  right: -40px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 1);
+  }
+}

@@ -1,0 +1,111 @@
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.2s ease;
+}
+
+.confirm-dialog-modal {
+  background: #1a1a1a;
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.confirm-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 2px solid #00ff41;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.confirm-dialog-header h3 {
+  color: #00ff41;
+  margin: 0;
+  font-size: 1.3em;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.confirm-dialog-close {
+  background: transparent;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.confirm-dialog-close:hover {
+  background: rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+.confirm-dialog-content {
+  padding: 25px;
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+}
+
+.confirm-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 25px;
+  border-top: 1px solid rgba(0, 255, 65, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.confirm-dialog-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid;
+}
+
+.cancel-btn {
+  background: rgba(255, 0, 64, 0.1);
+  border-color: #ff0040;
+  color: #ff0040;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 0, 64, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 64, 0.3);
+}
+
+.confirm-btn {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: #00ff41;
+  color: #00ff41;
+}
+
+.confirm-btn:hover {
+  background: rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+

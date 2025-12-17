@@ -1,0 +1,160 @@
+.input-prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(5px);
+}
+
+.input-prompt-modal {
+  background: #1a1a1a;
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  min-width: 400px;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+.input-prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  background: rgba(0, 255, 65, 0.05);
+}
+
+.input-prompt-header h3 {
+  margin: 0;
+  color: #00ff41;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-prompt-close {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ccc;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.input-prompt-close:hover {
+  background: rgba(255, 0, 64, 0.2);
+  border-color: #ff0040;
+  color: #ff0040;
+  transform: rotate(90deg);
+}
+
+.input-prompt-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-prompt-body {
+  padding: 20px;
+}
+
+.input-prompt-message {
+  margin: 0 0 15px 0;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.input-prompt-input {
+  width: 100%;
+  padding: 12px 15px;
+  background: #0a0a0a;
+  border: 2px solid #00ff41;
+  border-radius: 6px;
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.input-prompt-input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  color: #00d4ff;
+}
+
+.input-prompt-input::placeholder {
+  color: rgba(0, 255, 65, 0.5);
+}
+
+.input-prompt-footer {
+  padding: 15px 20px;
+  border-top: 1px solid rgba(0, 255, 65, 0.3);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.input-prompt-btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid;
+}
+
+.input-prompt-btn.cancel-btn {
+  background: rgba(102, 102, 102, 0.1);
+  border-color: #666;
+  color: #999;
+}
+
+.input-prompt-btn.cancel-btn:hover {
+  background: rgba(102, 102, 102, 0.2);
+  border-color: #999;
+  color: #ccc;
+}
+
+.input-prompt-btn.confirm-btn {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: #00ff41;
+  color: #00ff41;
+}
+
+.input-prompt-btn.confirm-btn:hover {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: #00d4ff;
+  color: #00d4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .input-prompt-modal {
+    min-width: 90%;
+    max-width: 90%;
+    margin: 20px;
+  }
+}

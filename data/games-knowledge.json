@@ -1,0 +1,145 @@
+{
+  "games": {
+    "league of legends": {
+      "name": "League of Legends",
+      "aliases": ["lol", "league", "league of legends"],
+      "type": "MOBA",
+      "developer": "Riot Games",
+      "release_year": 2009,
+      "key_info": {
+        "objectives": ["Destroy enemy Nexus", "Control Dragon", "Secure Baron Nashor", "Take turrets"],
+        "roles": ["Top", "Jungle", "Mid", "ADC", "Support"],
+        "map": "Summoner's Rift",
+        "game_modes": ["Ranked", "Normal", "ARAM", "TFT"]
+      },
+      "meta_concepts": {
+        "builds": "Items vary by role: Tanks build defensive items, ADCs build crit/attack speed, Mages build AP",
+        "objectives": "Dragon provides team buffs, Baron empowers minions, Elder Dragon gives execute damage",
+        "strategy": "Early game: Farm and ward. Mid game: Team fights around objectives. Late game: Protect carries"
+      },
+      "popular_champions": ["Jinx", "Yasuo", "Lux", "Garen", "Ashe", "Thresh", "Lee Sin"],
+      "common_terms": ["CS", "Gank", "Ward", "Ultimate", "Flash", "Smite", "Baron", "Dragon"]
+    },
+    "valorant": {
+      "name": "Valorant",
+      "aliases": ["valorant", "val"],
+      "type": "Tactical FPS",
+      "developer": "Riot Games",
+      "release_year": 2020,
+      "key_info": {
+        "objectives": ["Plant/Defuse Spike", "Eliminate enemy team", "Control sites"],
+        "roles": ["Duelist", "Initiator", "Controller", "Sentinel"],
+        "maps": ["Bind", "Haven", "Split", "Ascent", "Icebox", "Breeze", "Fracture", "Pearl"],
+        "game_modes": ["Competitive", "Unrated", "Spike Rush", "Deathmatch"]
+      },
+      "meta_concepts": {
+        "economy": "Buy weapons and abilities with credits earned from rounds",
+        "agents": "Each agent has unique abilities: Duelists entry frag, Controllers block vision, Sentinels defend",
+        "strategy": "Attack: Execute site takes with utility. Defense: Hold angles and retake with utility"
+      },
+      "popular_agents": ["Jett", "Reyna", "Sage", "Omen", "Phoenix", "Sova", "Brimstone"],
+      "common_terms": ["Spike", "Eco", "Full Buy", "Operator", "Vandal", "Phantom", "Clutch"]
+    },
+    "counter-strike": {
+      "name": "Counter-Strike",
+      "aliases": ["cs", "csgo", "cs2", "counter-strike", "counter strike", "cs:go"],
+      "type": "Tactical FPS",
+      "developer": "Valve",
+      "release_year": 2012,
+      "key_info": {
+        "objectives": ["Plant/Defuse C4", "Eliminate enemy team"],
+        "roles": ["AWPer", "Rifler", "Entry Fragger", "Support", "IGL"],
+        "maps": ["Dust II", "Mirage", "Inferno", "Nuke", "Overpass", "Vertigo", "Ancient", "Anubis"],
+        "game_modes": ["Competitive", "Wingman", "Deathmatch", "Casual"]
+      },
+      "meta_concepts": {
+        "economy": "Buy weapons with money from kills/rounds. Save rounds when low on money",
+        "weapons": "AK-47 and M4A4 are primary rifles. AWP is sniper. Pistols for eco rounds",
+        "strategy": "T-side: Execute site takes with smokes and flashes. CT-side: Hold angles and retake"
+      },
+      "popular_weapons": ["AK-47", "M4A4", "AWP", "Glock-18", "USP-S", "Desert Eagle"],
+      "common_terms": ["Eco", "Force Buy", "Full Buy", "AWP", "Entry", "Trade", "Retake", "Clutch"]
+    },
+    "dota 2": {
+      "name": "Dota 2",
+      "aliases": ["dota", "dota 2", "dota2"],
+      "type": "MOBA",
+      "developer": "Valve",
+      "release_year": 2013,
+      "key_info": {
+        "objectives": ["Destroy enemy Ancient", "Control Roshan", "Take towers"],
+        "roles": ["Carry", "Mid", "Offlane", "Support", "Hard Support"],
+        "map": "Dota 2 Map",
+        "game_modes": ["Ranked", "Turbo", "All Pick", "Random Draft"]
+      },
+      "meta_concepts": {
+        "items": "Items provide stats and abilities. Key items: Blink Dagger, Black King Bar, Aegis of Immortal",
+        "objectives": "Roshan drops Aegis (revive) and cheese. Towers give gold and map control",
+        "strategy": "Early: Farm and gank. Mid: Team fights. Late: Protect carry and push"
+      },
+      "popular_heroes": ["Pudge", "Invoker", "Anti-Mage", "Crystal Maiden", "Juggernaut"],
+      "common_terms": ["Gank", "Farm", "Ward", "Ultimate", "BKB", "Roshan", "Ancient"]
+    },
+    "apex legends": {
+      "name": "Apex Legends",
+      "aliases": ["apex", "apex legends"],
+      "type": "Battle Royale",
+      "developer": "Respawn Entertainment",
+      "release_year": 2019,
+      "key_info": {
+        "objectives": ["Be last squad standing", "Eliminate enemies", "Survive ring"],
+        "roles": "Legends with unique abilities",
+        "maps": ["World's Edge", "Olympus", "Storm Point", "Kings Canyon", "Broken Moon"],
+        "game_modes": ["Battle Royale", "Arenas", "Ranked", "Mixtape"]
+      },
+      "meta_concepts": {
+        "legends": "Each legend has tactical, passive, and ultimate abilities. Team composition matters",
+        "weapons": "Weapon tiers: Common (white), Rare (blue), Epic (purple), Legendary (gold)",
+        "strategy": "Early: Loot quickly. Mid: Rotate and third-party. Late: Position for final ring"
+      },
+      "popular_legends": ["Wraith", "Pathfinder", "Bloodhound", "Lifeline", "Octane", "Horizon"],
+      "common_terms": ["Ring", "Third Party", "Respawn", "Banner", "Loot", "Drop", "Squad"]
+    },
+    "overwatch": {
+      "name": "Overwatch",
+      "aliases": ["overwatch", "ow", "overwatch 2"],
+      "type": "Hero Shooter",
+      "developer": "Blizzard Entertainment",
+      "release_year": 2016,
+      "key_info": {
+        "objectives": ["Capture point", "Push payload", "Control point", "Hybrid"],
+        "roles": ["Tank", "Damage", "Support"],
+        "maps": ["King's Row", "Hanamura", "Route 66", "Ilios", "Lijiang Tower"],
+        "game_modes": ["Competitive", "Quick Play", "Arcade", "Mystery Heroes"]
+      },
+      "meta_concepts": {
+        "team_comp": "2-2-2 role lock: 2 Tanks, 2 Damage, 2 Support. Synergy between heroes matters",
+        "ultimates": "Each hero has powerful ultimate ability. Coordinate ultimates for team fights",
+        "strategy": "Tanks create space, Damage secure kills, Support keeps team alive"
+      },
+      "popular_heroes": ["Genji", "Tracer", "Mercy", "Reinhardt", "Widowmaker", "Ana"],
+      "common_terms": ["Ultimate", "Combo", "Stagger", "Res", "Nano", "Grav", "Shield"]
+    },
+    "fortnite": {
+      "name": "Fortnite",
+      "aliases": ["fortnite", "fn"],
+      "type": "Battle Royale",
+      "developer": "Epic Games",
+      "release_year": 2017,
+      "key_info": {
+        "objectives": ["Be last player/team standing", "Survive storm", "Build structures"],
+        "mechanics": ["Building", "Weapons", "Items", "Vehicles"],
+        "maps": "Single map that changes each season",
+        "game_modes": ["Battle Royale", "Creative", "Save the World", "Zero Build"]
+      },
+      "meta_concepts": {
+        "building": "Build walls, ramps, floors for defense and mobility. Edit structures quickly",
+        "weapons": "Weapon rarities: Common, Uncommon, Rare, Epic, Legendary",
+        "strategy": "Early: Land safely and loot. Mid: Rotate and engage. Late: Build and position"
+      },
+      "popular_items": ["Assault Rifle", "Shotgun", "Sniper", "Shield Potion", "Medkit"],
+      "common_terms": ["Storm", "Build", "Edit", "Box Fight", "High Ground", "Third Party"]
+    }
+  }
+}
+

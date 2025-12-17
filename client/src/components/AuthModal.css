@@ -1,0 +1,225 @@
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.2s ease;
+}
+
+.auth-modal {
+  background: #1a1a1a;
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.auth-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 2px solid #00ff41;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.auth-modal-header h2 {
+  color: #00ff41;
+  margin: 0;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.auth-modal-close {
+  background: transparent;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.auth-modal-close:hover {
+  background: rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+.auth-modal-content {
+  padding: 25px;
+}
+
+.auth-error {
+  background: rgba(255, 0, 64, 0.2);
+  border: 1px solid #ff0040;
+  color: #ff0040;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-field label {
+  color: #00ff41;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+}
+
+.auth-field input {
+  background: #0a0a0a;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.auth-field input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  color: #00d4ff;
+}
+
+.auth-field input::placeholder {
+  color: rgba(0, 255, 65, 0.5);
+}
+
+.auth-submit-btn {
+  background: rgba(0, 255, 65, 0.2);
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background: rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 255, 65, 0.3);
+}
+
+.auth-divider span {
+  padding: 0 15px;
+  color: rgba(0, 255, 65, 0.6);
+  font-size: 12px;
+}
+
+.auth-oauth {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 2px solid;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  transition: all 0.3s;
+  background: transparent;
+}
+
+.google-btn {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.google-btn:hover {
+  background: rgba(66, 133, 244, 0.1);
+  box-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+}
+
+.discord-btn {
+  border-color: #5865f2;
+  color: #5865f2;
+}
+
+.discord-btn:hover {
+  background: rgba(88, 101, 242, 0.1);
+  box-shadow: 0 0 10px rgba(88, 101, 242, 0.3);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(0, 255, 65, 0.7);
+  font-size: 14px;
+}
+
+.auth-link-btn {
+  background: none;
+  border: none;
+  color: #00d4ff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.auth-link-btn:hover {
+  color: #00ff41;
+}
+

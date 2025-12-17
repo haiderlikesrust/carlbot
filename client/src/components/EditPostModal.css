@@ -1,0 +1,151 @@
+.edit-post-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-post-modal {
+  background: #1a1a1a;
+  border: 1px solid #00ff41;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.edit-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.edit-post-header h2 {
+  color: #00ff41;
+  margin: 0;
+  font-size: 24px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #00ff41;
+}
+
+.edit-post-form {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #00ff41;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.edit-input,
+.edit-textarea {
+  width: 100%;
+  padding: 12px;
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.edit-input:focus,
+.edit-textarea:focus {
+  outline: none;
+  border-color: #00ff41;
+}
+
+.edit-textarea {
+  min-height: 150px;
+}
+
+.char-count {
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  color: #ff6666;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.edit-post-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #999;
+}
+
+.cancel-btn:hover {
+  border-color: #666;
+  color: #fff;
+}
+
+.save-btn {
+  background: #00ff41;
+  color: #000;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #00cc33;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

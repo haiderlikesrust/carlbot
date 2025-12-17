@@ -1,0 +1,151 @@
+.carlbot-profile-page {
+  min-height: 100vh;
+  background: var(--bg-primary, #0a0a0a);
+  color: var(--text-primary, #00ff41);
+  padding: 2rem;
+}
+
+.profile-header {
+  margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+  margin: 1rem 0;
+}
+
+.back-btn {
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.profile-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  background: var(--bg-secondary, #1a1a1a);
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-card h2 {
+  margin: 0.5rem 0;
+  color: #00ff41;
+}
+
+.profile-bio {
+  color: rgba(0, 255, 65, 0.8);
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff41;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(0, 255, 65, 0.6);
+  margin-top: 0.5rem;
+}
+
+.bot-controls,
+.bot-features {
+  background: var(--bg-secondary, #1a1a1a);
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bot-controls h3,
+.bot-features h3 {
+  margin-top: 0;
+  color: #00ff41;
+}
+
+.control-info {
+  margin: 1rem 0;
+  color: rgba(0, 255, 65, 0.8);
+  line-height: 1.6;
+}
+
+.trigger-btn {
+  background: #00ff41;
+  border: 1px solid #00ff41;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.trigger-btn:hover {
+  background: #00d4ff;
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+.bot-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.bot-features li {
+  padding: 0.5rem 0;
+  color: rgba(0, 255, 65, 0.8);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.bot-features li:last-child {
+  border-bottom: none;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  color: rgba(0, 255, 65, 0.5);
+  font-size: 1.2rem;
+}
+

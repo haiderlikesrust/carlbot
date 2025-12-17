@@ -1,0 +1,217 @@
+.profile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+  /* Ensure it doesn't affect layout */
+  isolation: isolate;
+}
+
+.profile-modal {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 2px solid rgba(0, 255, 65, 0.4);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8),
+              0 0 30px rgba(0, 255, 65, 0.3);
+  position: relative;
+  z-index: 10001;
+  /* Ensure modal doesn't affect parent layout */
+  pointer-events: auto;
+}
+
+.profile-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 2px solid #00ff41;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.profile-customize-btn {
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.profile-customize-btn:hover {
+  background: rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.profile-modal-header h2 {
+  color: #00ff41;
+  margin: 0;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.profile-modal-close {
+  background: transparent;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.profile-modal-close:hover {
+  background: rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+.profile-form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-message {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.profile-message.success {
+  background: rgba(0, 255, 65, 0.2);
+  border: 1px solid #00ff41;
+  color: #00ff41;
+}
+
+.profile-message.error {
+  background: rgba(255, 0, 64, 0.2);
+  border: 1px solid #ff0040;
+  color: #ff0040;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-field label {
+  color: #00ff41;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+}
+
+.profile-field input[type="text"],
+.profile-field textarea,
+.profile-field select {
+  background: #0a0a0a;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+  resize: vertical;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus,
+.profile-field select:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  color: #00d4ff;
+}
+
+.color-picker-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.color-picker {
+  width: 60px;
+  height: 40px;
+  border: 2px solid #00ff41;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+}
+
+.color-input {
+  flex: 1;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.profile-cancel-btn,
+.profile-save-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid;
+}
+
+.profile-cancel-btn {
+  background: rgba(255, 0, 64, 0.1);
+  border-color: #ff0040;
+  color: #ff0040;
+}
+
+.profile-cancel-btn:hover {
+  background: rgba(255, 0, 64, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 64, 0.3);
+}
+
+.profile-save-btn {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: #00ff41;
+  color: #00ff41;
+}
+
+.profile-save-btn:hover:not(:disabled) {
+  background: rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+.profile-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

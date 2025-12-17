@@ -1,0 +1,377 @@
+.build-comparison-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.build-comparison-modal {
+  background: #1a1a1a;
+  border: 1px solid #00ff41;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.build-comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.build-comparison-header h2 {
+  color: #00ff41;
+  margin: 0;
+  font-size: 24px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #00ff41;
+}
+
+.build-comparison-form {
+  padding: 20px;
+}
+
+.build-input-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.build-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.build-input-group label {
+  color: #00ff41;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.build-name-input,
+.build-data-input {
+  padding: 12px;
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+}
+
+.build-name-input:focus,
+.build-data-input:focus {
+  outline: none;
+  border-color: #00ff41;
+}
+
+.build-data-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.vs-divider {
+  color: #00ff41;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.build-comparison-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.compare-btn,
+.reset-btn {
+  padding: 12px 24px;
+  background: #00ff41;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.compare-btn:hover:not(:disabled) {
+  background: #00cc33;
+}
+
+.compare-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #999;
+}
+
+.reset-btn:hover {
+  border-color: #00ff41;
+  color: #00ff41;
+}
+
+.build-comparison-results {
+  padding: 20px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #333;
+}
+
+.results-header h3 {
+  color: #00ff41;
+  margin: 0;
+}
+
+.comparison-side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.build-column {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.build-column h4 {
+  color: #00ff41;
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.build-items,
+.build-stats {
+  margin-bottom: 20px;
+}
+
+.build-items h5,
+.build-stats h5 {
+  color: #00ff41;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.build-item {
+  padding: 8px 12px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.build-item.similar {
+  border-color: #00ff41;
+  background: rgba(0, 255, 65, 0.1);
+  color: #00ff41;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.stat-name {
+  color: #999;
+}
+
+.stat-value {
+  color: #00ff41;
+  font-weight: bold;
+}
+
+.comparison-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.differences-section,
+.similarities-section {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.differences-section h5,
+.similarities-section h5 {
+  color: #00ff41;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.differences-list,
+.similarities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.difference-item {
+  padding: 8px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff6666;
+  border-radius: 6px;
+  color: #ff6666;
+  font-size: 12px;
+}
+
+.similarity-item {
+  padding: 8px;
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid #00ff41;
+  border-radius: 6px;
+  color: #00ff41;
+  font-size: 12px;
+}
+
+.no-differences,
+.no-similarities {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+}
+
+.stats-comparison {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+}
+
+.stats-comparison h4 {
+  color: #00ff41;
+  margin: 0 0 16px 0;
+}
+
+.stats-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.stat-diff-item {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.stat-diff-name {
+  color: #00ff41;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-diff-values {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stat-diff-build1,
+.stat-diff-build2 {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.stat-diff-arrow {
+  color: #666;
+}
+
+.stat-diff-change {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.stat-diff-change.positive {
+  color: #00ff41;
+}
+
+.stat-diff-change.negative {
+  color: #ff6666;
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  color: #ff6666;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 968px) {
+  .build-input-section {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-divider {
+    padding-top: 0;
+    padding: 20px 0;
+  }
+
+  .comparison-side-by-side {
+    grid-template-columns: 1fr;
+  }
+}

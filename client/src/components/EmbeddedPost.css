@@ -1,0 +1,110 @@
+.embedded-post {
+  background: var(--bg-secondary, #1a1a1a);
+  border: 2px solid var(--accent-color, #00ff41);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 500px;
+}
+
+.embedded-post:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+  transform: translateY(-2px);
+  border-color: #00ff88;
+}
+
+.embedded-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.embedded-post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.embedded-avatar,
+.embedded-avatar-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color, #00ff41);
+  object-fit: cover;
+}
+
+.embedded-avatar-placeholder {
+  background: var(--bg-primary, #0a0a0a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.embedded-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.embedded-username {
+  font-weight: bold;
+  color: var(--accent-color, #00ff41);
+  font-size: 0.9rem;
+}
+
+.embedded-game {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #888);
+}
+
+.embedded-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #888);
+}
+
+.embedded-content {
+  color: var(--text-primary, #00ff41);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  word-wrap: break-word;
+}
+
+.embedded-content a {
+  color: var(--accent-color, #00ff41);
+  text-decoration: underline;
+}
+
+.embedded-image {
+  margin: 0.75rem 0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--accent-color, #00ff41);
+}
+
+.embedded-image img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.embedded-stats {
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--accent-color, #00ff41);
+  font-size: 0.85rem;
+  color: var(--text-secondary, #888);
+}
+
+.embedded-stats span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+

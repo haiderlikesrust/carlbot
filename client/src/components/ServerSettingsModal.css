@@ -1,0 +1,39 @@
+.server-settings-modal {
+  max-width: 500px;
+  width: 90%;
+}
+
+.server-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg, 20px);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs, 4px);
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary, #ffffff);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.icon-preview {
+  margin-top: var(--space-xs, 4px);
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  border: 2px solid var(--border-secondary, #202225);
+}
+
+.icon-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,159 @@
+.invite-modal {
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.invite-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl, 24px);
+  padding: var(--space-md, 16px);
+}
+
+.create-invite-section,
+.existing-invites-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 16px);
+}
+
+.create-invite-section h3,
+.existing-invites-section h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary, #ffffff);
+}
+
+.invite-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 16px);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md, 16px);
+}
+
+.new-invite-display {
+  padding: var(--space-md, 16px);
+  background: var(--bg-secondary, #36393f);
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid var(--color-primary, #00ff41);
+}
+
+.new-invite-display p {
+  margin: 0 0 var(--space-sm, 8px) 0;
+  color: var(--text-primary, #ffffff);
+  font-weight: 500;
+}
+
+.invite-link-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 8px);
+  padding: var(--space-sm, 8px);
+  background: var(--bg-primary, #2f3136);
+  border-radius: var(--radius-sm, 4px);
+}
+
+.invite-link-box code {
+  flex: 1;
+  color: var(--color-primary, #00ff41);
+  font-family: monospace;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.copy-btn {
+  padding: var(--space-xs, 4px) var(--space-sm, 8px);
+  background: var(--color-primary, #00ff41);
+  color: #000;
+  border: none;
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all var(--transition-fast, 0.15s);
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.copy-btn.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.invites-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm, 8px);
+}
+
+.invite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm, 8px) var(--space-md, 16px);
+  background: var(--bg-secondary, #36393f);
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid var(--border-secondary, #202225);
+}
+
+.invite-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.invite-code {
+  font-family: monospace;
+  font-size: 14px;
+  color: var(--color-primary, #00ff41);
+  font-weight: 600;
+}
+
+.invite-stats {
+  font-size: 12px;
+  color: var(--text-tertiary, #b9bbbe);
+}
+
+.invite-actions {
+  display: flex;
+  gap: var(--space-xs, 4px);
+}
+
+.delete-btn {
+  padding: var(--space-xs, 4px) var(--space-sm, 8px);
+  background: var(--color-error, #f04747);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  font-size: 12px;
+  transition: all var(--transition-fast, 0.15s);
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+.delete-btn.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.no-invites {
+  color: var(--text-tertiary, #b9bbbe);
+  font-style: italic;
+  text-align: center;
+  padding: var(--space-lg, 20px);
+}

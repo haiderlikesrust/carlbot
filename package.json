@@ -1,0 +1,54 @@
+{
+  "name": "carl-gaming-companion",
+  "version": "1.0.0",
+  "description": "AI gaming companion using ChatGPT and Eleven Labs TTS",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "client": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "build": "cd client && npm run build",
+    "dev:all": "concurrently \"npm run dev\" \"npm run client\"",
+    "postinstall": "cd client && npm install",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "seed": "node scripts/seed-dummy-data.js",
+    "seed-users": "node scripts/seed-users-and-posts.js",
+    "seed-communities": "node scripts/seed-communities.js",
+    "create-carlbot": "node scripts/create-carlbot.js",
+    "create-admin": "node scripts/create-admin.js",
+    "bot-scheduler": "node scripts/bot-scheduler.js"
+  },
+  "keywords": [
+    "ai",
+    "gaming",
+    "chatbot",
+    "tts",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-session": "^1.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.20.1",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
